@@ -6,7 +6,7 @@ namespace DLS.Simulation
 {
 	public class SimAudio
 	{
-		public const int freqCount = 256;
+		public const int freqCount = 65536;
 
 		public readonly float[] freqsAll = new float[freqCount];
 		readonly double[] targetAmplitudesPerFreq_temp = new double[freqCount];
