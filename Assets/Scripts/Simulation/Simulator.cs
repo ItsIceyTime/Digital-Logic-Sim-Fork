@@ -501,7 +501,9 @@ namespace DLS.Simulation
 				}
 				case ChipType.Buzzer:
 				{
-					int freqIndex = PinState.GetBitStates(chip.InputPins[0].State);
+					int freqIndexA = PinState.GetBitStates(chip.InputPins[0].State);
+					int freqIndexB = PinState.GetBitStates(chip.InputPins[0].State);
+					int freqIndex = 256*freqIndexA + freqIndexB
 					int volumeIndex = PinState.GetBitStates(chip.InputPins[1].State);
 					audioState.RegisterNote(freqIndex, (uint)volumeIndex);
 					break;
